@@ -11,7 +11,7 @@ const logr = bunyan.createLogger({
       req: bunyan.stdSerializers.req,
       res: bunyan.stdSerializers.res
     },
-    src: ( ['debug','trace'].indexOf(level) !== -1 )
+    src: ( ['debug','trace'].indexOf(level) !== -1 ),
 });
 
 module.exports = logr;
