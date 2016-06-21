@@ -1,6 +1,6 @@
 {
   "name": "logr",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Bunyan Logger instance ready to use",
   "main": "logr.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.everymundo.org:nodejs-helpers/logr.git"
+    "url": "git@github.com:danielsan/logr.git"
   },
   "keywords": [
     "bunyan"
   ],
   "author": "Daniel Santana <daniel@everymundo.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "bunyan": "^1.5.1"
+    "bunyan": "^1.8.1"
   }
 }
