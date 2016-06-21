@@ -1,6 +1,6 @@
 {
   "name": "logr",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Bunyan Logger instance ready to use",
   "main": "logr.js",
   "scripts": {
@@ -16,6 +16,6 @@
   "author": "Daniel Santana <daniel@everymundo.com>",
   "license": "ISC",
   "dependencies": {
-    "bunyan": "^1.5.1"
+    "bunyan": "^1.8.1"
   }
 }
