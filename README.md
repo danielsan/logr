@@ -3,7 +3,7 @@ Bunyan Logger instance ready to use
 
 # INSTALL
 
-    npm install --save "git+ssh://git@gitlab.everymundo.org:nodejs-helpers/logr.git"
+    npm install --save "git+ssh://git@github.com:danielsan/logr.git"
 
 It might create and entry in your ```packages.json``` like this:
 
