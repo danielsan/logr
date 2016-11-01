@@ -14,4 +14,5 @@ const logr = bunyan.createLogger({
     src: ( ['debug','trace'].indexOf(level) !== -1 ),
 });
 
+logr.raw = (_) => process.stdout.write(_ + '\n');
 module.exports = logr;
