@@ -2,7 +2,7 @@
 
 const bunyan = require('bunyan');
 
-const level  = process.env.LOG_LEVEL || 'debug';
+const level  = process.env.LOG_LEVEL ? (process.env.LOG_LEVEL === 'test' ? 'fatal' : process.env.LOG_LEVEL) : 'debug';
 
 const logr = bunyan.createLogger({
     name: 'LOGR',
