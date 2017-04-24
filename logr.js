@@ -1,18 +1,28 @@
 'use strict';
 
-const bunyan = require('bunyan');
+function getBunyan(level) {
+  const bunyan = require('bunyan');
 
-const level  = process.env.LOG_LEVEL ? (process.env.LOG_LEVEL === 'test' ? 'fatal' : process.env.LOG_LEVEL) : 'debug';
-
-const logr = bunyan.createLogger({
-    name: 'LOGR',
+  return bunyan.createLogger({
+    name: 'BUNY',
     level,
     serializers: {
       req: bunyan.stdSerializers.req,
       res: bunyan.stdSerializers.res
     },
     src: ( ['debug','trace'].indexOf(level) !== -1 ),
-});
+  })
+}
+
+function getPino(level) {
+  return require('pino')({name: 'PINO', level});
+}
+
+const level  = !process.env.LOG_LEVEL ? 'debug' :
+  (process.env.LOG_LEVEL === 'test' ? 'fatal' : process.env.LOG_LEVEL);
+
+const logr = ['debug', 'trace'].includes(level) ? getBunyan(level) : getPino(level);
 
 logr.raw = (_) => process.stdout.write(_ + '\n');
+
 module.exports = logr;
