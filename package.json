@@ -16,7 +16,7 @@
   "author": "Daniel Santana <daniel@everymundo.com>",
   "license": "MIT",
   "dependencies": {
-    "bunyan": "1.8.10",
+    "bunyan": "1.8.13",
     "pino": "4.3.0"
   }
 }
