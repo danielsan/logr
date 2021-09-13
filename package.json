@@ -17,6 +17,6 @@
   "license": "MIT",
   "dependencies": {
     "bunyan": "1.8.10",
-    "pino": "4.3.0"
+    "pino": "5.0.0"
   }
 }
